@@ -1,0 +1,58 @@
+{
+  "name": "agora-rtc-react-ui",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Agora RTC React SDK UI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgoraIO-Extensions/agora-rtc-react.git",
+    "directory": "packages/agora-rtc-react-ui"
+  },
+  "keywords": [
+    "react",
+    "agora-rtc-react-ui"
+  ],
+  "bugs": {
+    "url": "https://github.com/AgoraIO-Extensions/agora-rtc-react/issues"
+  },
+  "contributors": [
+    "hyrious",
+    "LichKing-2234",
+    "CRIMX",
+    "guoxianzhe"
+  ],
+  "main": "src/index.ts",
+  "publishConfig": {
+    "main": "dist/agora-rtc-react-ui.js",
+    "module": "dist/agora-rtc-react-ui.mjs",
+    "types": "dist/agora-rtc-react-ui.d.ts"
+  },
+  "source": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm run build",
+    "build": "tsup",
+    "release": "release-it",
+    "start": "pnpm run -F example-overview start",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "storybook-docs": "storybook dev --docs",
+    "build-storybook-docs": "storybook build --docs",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest --ui"
+  },
+  "peerDependencies": {
+    "agora-rtc-react": ">=2",
+    "react": ">=16.8"
+  },
+  "devDependencies": {
+    "agora-rtc-react":  "https://github.com/shayanali4/agora-rtc-react-ui.git"
+    
+  }
+}
